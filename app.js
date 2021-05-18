@@ -4,16 +4,16 @@ var wins = 0,
     ties = 0;
 //store users input onkeyup
 document.onkeyup = function(event) {
-    var userGuess = event.key;
+    var userGuess = event.key.toLocaleLowerCase();
     console.log(userGuess);
 
 
 
-//the program must provide an option (r,p,s) at random
-//get choice from array using math.random
- var choices = ['r', 'p', 's'];
 
- var computerGuess = choices[Math.floor(Math.random() * choices.length)];
+//have the computer choose a random index number form options array   
+ var options = ['r', 'p', 's'];
+
+ var computerGuess = options[Math.floor(Math.random() * options.length)];
 
 
 //create conditional statements to process user input and computer input
